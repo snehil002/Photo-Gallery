@@ -1,0 +1,293 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body, button, #textInputForName, #textInputForQuote{
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  color: black;
+}
+body{
+  background: #FFE7B2;
+}
+hr{
+  border: 1px solid #c98c0cff;
+  background-color: #c98c0cff;
+  margin: 0px;
+}
+#createPostDiv{
+  width: 100%;
+  padding: 16px 20px;
+  margin: 16px;
+  border-radius: 8px;
+  background-color: white;
+  transition: box-shadow 0.3s;
+}
+button{
+  background: transparent;
+  border: none;
+  color: #c98c0cff;
+  border-radius: 8px;
+  padding: 12px;
+}
+button:active {
+  background-color: #f2b564ff;
+}
+#submitButton{
+  border: none;
+  color: white;
+  background-color: #FF9800;
+  width: 100%;
+  border-radius: 20px;
+}
+#submitButton:active{
+  background-color: #FFA726;
+  color: white;
+}
+.pageButtons{
+  background-color: transparent;
+  margin-left: 16px;
+  border: 1px solid #c98c0cff;
+  padding: 10px;
+}
+.pageButtons:active{
+  background-color: #f2b564ff;
+}
+#fileInputLabel{
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #c98c0cff;
+  color: #c98c0cff;
+  padding: 5px;
+  border-radius: 20px;
+  width: 100%;
+}
+#fileInputLabel:active{
+  background-color: #f2b56499;
+  color: black;
+}
+#insideLabelDiv{
+  display: flex;
+  align-items: center;
+}
+#fileInputLabelText{
+  padding: 8px;
+  flex-grow: 1;
+}
+#fileInput{
+  opacity: 0;
+  width: 0px;
+  flex-grow: 10;
+}
+#fileInputLabelPic{
+  display: inline-block;
+  background: url('Assets/up_image_48dp.png') center center no-repeat;
+  width: 48px;
+  height: 48px;
+  vertical-align: bottom;
+  flex-grow: 1;
+  padding: 0px;
+}
+#textDiv, #quoteDiv, #fileInputDiv, #selectedPhotoDiv, #submitDiv, #progressDiv, #resDiv{
+  width: 100%;
+}
+#selectedPhotoDiv img{
+  max-width: 100%;
+  margin-top: 16px;
+  vertical-align: middle;
+}
+#selectedPhotoDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#textInputForName{
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 20px;
+  background: #fff8e080;
+  padding: 10px;
+  border-width: 1px;
+  transition: border-radius 0.8s;
+}
+#textInputForQuote{
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 20px;
+  background: #fff8e080;
+  padding: 10px;
+  border-width: 1px;
+  min-height: 100px;
+  resize: vertical;
+  vertical-align: bottom;
+  transition: border-radius 0.8s;
+}
+#textInputForName:focus, #textInputForQuote:focus{
+  border-width: 1px;
+  border-radius: 0px;
+}
+progress{
+  width: 100%;
+  margin-top: 8px;
+  vertical-align: middle;
+}
+#galleryButtonsDivTop button{
+  margin: 0px;
+}
+#galleryButtonsDivBottom button{
+  margin: 0px 10px;
+}
+#galleryTopDiv, #resDiv{
+  text-align: center;
+}
+#galleryDiv{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 20px 0px;
+  padding: 0px 4px;
+}
+.col{
+  flex: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0px 4px;
+}
+.inDiv{
+  width: 100%;
+  border: none;
+  margin-top: 8px;
+  box-shadow: 0px 2px 2px 0px #c98c0cff;
+  border-radius: 8px 8px 0px 0px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 0px;
+  background-color: white;
+}
+.whoDiv{
+  display: flex;
+  padding: 0px 0px 0px 16px;
+}
+.whoDiv .nameP{
+  flex-grow: 20;
+  font-weight: bold;
+  margin: 0px;
+  padding: 8px 0px;
+}
+.whoDiv .delBut{
+  flex-grow: 1;
+  padding: 8px;
+  margin: 0px;
+}
+.quoteDiv{
+  padding: 0px 16px;
+}
+.quoteDiv p{
+  margin: 0px;
+  padding: 0px;
+}
+.imgDiv{
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #c98c0cff;
+  background: transparent;
+}
+.imgDiv img{
+  max-width: 100%;
+}
+.centerDivContentsHoriontally{
+  display: flex;
+  justify-content: center;
+}
+.marginTop16px{
+  margin-top: 16px;
+}
+.margin0px{
+  margin: 0px;
+}
+.margin8px{
+  margin: 8px;
+}
+.margin16px{
+  margin: 16px;
+}
+.padding0px{
+  padding: 0px;
+}
+.padding8px{
+  padding: 8px;
+}
+.padding16px{
+  padding: 16px;
+}
+@media (min-width: 1001px) {
+  body, button, #textInputForName, #textInputForQuote {
+    font-size: 20px;
+  }
+  #textInputForName:hover, #textInputForName:focus,
+  #textInputForQuote:hover, #textInputForQuote:focus {
+    border-width: 1px;
+    border-radius: 0px;
+  }
+  #fileInputLabel:hover{
+    background-color: #f0e8c9;
+    color: black;
+  }
+  #fileInputLabel:active{
+    background-color: #f2b56499;
+    color: black;
+  }
+  button:hover{
+    background-color: #f8cb86ff;
+  }
+  button:active {
+    background-color: #f2b564ff;
+  }
+  .pageButtons:hover {
+    background-color: #f8cb86ff;
+  }
+  .pageButtons:active {
+    background-color: #f2b564ff;
+  }
+  #submitButton:hover {
+    background-color: #FFA726;
+    color: white;
+  }
+  #submitButton:active {
+    background-color: #FFA726;
+    color: white;
+  }
+  #createPostDiv{
+    width: 500px;
+  }
+  #createPostDiv:hover{
+    box-shadow: 0px 0px 20px 1px #e3e0d0ff;
+  }
+  .col{
+    flex: 25%;
+    max-width: 25%;
+  }
+}
+@media (max-width: 600px){
+  .col{
+    padding: 0px;
+    flex: 100%;
+    max-width: 100%;
+  }
+  #galleryDiv{
+    padding: 0px;
+  }
+  #createPostDiv{
+    width: 100%;
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+  .inDiv{
+    border-radius: 0px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1000px){
+  .col{
+    flex: 50%;
+    max-width: 50%;
+  }
+}
