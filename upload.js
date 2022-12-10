@@ -134,7 +134,7 @@ function uploadCanvas() {
         databaseRef.push(obj);
         resDiv.innerHTML = "Success!!! ✅";
         setTimeout(() => {
-          window.location.replace("../index.html");
+          window.location.replace("./index.html");
         }, 1000);
       })();
     }
