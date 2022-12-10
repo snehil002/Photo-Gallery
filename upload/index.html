@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      Photo Gallery
+    </title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js" defer></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js" defer></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js" defer></script>
+
+     <link rel="stylesheet" type="text/css" href="/style.css">
+     
+    <script src="./upload.js" defer>
+    </script>
+
+  </head>
+  <body>
+    
+    <ul class="menu">
+      <li><a href="/">Gallery</a></li>
+      <li><a href="/upload">Upload</a></li>
+    </ul>
+
+    <div id="createPostOutDiv" class="centerDivContentsHoriontally">
+      <div id="createPostDiv">
+
+        <div id="textDiv">
+          <input type="text" id="textInputForName" class="width-100" placeholder="Your sweet name"/>
+        </div>
+      
+        <div id="quoteDiv" class="marginTop16px">
+          <textarea id="textInputForQuote" class="width-100" placeholder="Your greeting for the world"></textarea>
+        </div>
+
+        <div id="selectedPhotoDiv"></div>
+
+        <div id="fileInputDiv" class="marginTop16px">
+          <label for="fileInput" id="fileInputLabel">
+            <div id="insideLabelDiv">
+              <div id="fileInputLabelText">Choose a pic</div>
+              <input type="file" id="fileInput" accept="image/png, image/jpeg"/>
+              <div id="fileInputLabelPic"></div>
+            </div>
+          </label>
+        </div>
+
+        <div id="submitDiv" class="marginTop16px">
+          <button id="submitButton" class="width-100">POST</button>
+        </div>
+        
+        <div id="progressDiv">
+          <progress id="uploadProgressBar" class="width-100" value="0" max="100"></progress>
+        </div>
+        
+        <div id="resDiv">
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="centerDivContentsHoriontally margin8px" style="color: #888; font-size: 14px;">
+      Created by SNEHIL with ❤
+    </footer>
+
+  </body>
+</html>

@@ -4,8 +4,8 @@ html, body {
 }
 body, button, #textInputForName, #textInputForQuote{
   font-family: 'Fraunces', serif;
-  font-size: 17px;
-  color: black;
+  font-size: 1.1rem;
+  color: brown;
 }
 body{
   background: #FFE7B2;
@@ -14,6 +14,18 @@ hr{
   border: 1px solid #c98c0cff;
   background-color: #c98c0cff;
   margin: 0px;
+}
+.menu {
+  list-style-type: none;
+  padding: 0 2rem;
+}
+.menu > li {
+  display: inline-block;
+  margin: 1rem;
+}
+.menu a, .menu a:hover, .menu a:active, .menu a:visited{
+  text-decoration: none;
+  color: brown;
 }
 #createPostDiv{
   width: 100%;
@@ -37,7 +49,6 @@ button:active {
   border: none;
   color: white;
   background-color: #FF9800;
-  width: 100%;
   border-radius: 20px;
 }
 #submitButton:active{
@@ -60,7 +71,6 @@ button:active {
   color: #c98c0cff;
   padding: 5px;
   border-radius: 20px;
-  width: 100%;
 }
 #fileInputLabel:active{
   background-color: #f2b56499;
@@ -88,7 +98,7 @@ button:active {
   flex-grow: 1;
   padding: 0px;
 }
-#textDiv, #quoteDiv, #fileInputDiv, #selectedPhotoDiv, #submitDiv, #progressDiv, #resDiv{
+.width-100 {
   width: 100%;
 }
 #selectedPhotoDiv img{
@@ -103,7 +113,6 @@ button:active {
 }
 #textInputForName{
   box-sizing: border-box;
-  width: 100%;
   border-radius: 20px;
   background: #fff8e080;
   padding: 10px;
@@ -112,7 +121,6 @@ button:active {
 }
 #textInputForQuote{
   box-sizing: border-box;
-  width: 100%;
   border-radius: 20px;
   background: #fff8e080;
   padding: 10px;
@@ -127,9 +135,9 @@ button:active {
   border-radius: 0px;
 }
 progress{
-  width: 100%;
   margin-top: 8px;
   vertical-align: middle;
+  display: none;
 }
 #galleryButtonsDivTop button{
   margin: 0px;
@@ -162,7 +170,7 @@ progress{
   vertical-align: middle;
   box-sizing: border-box;
   padding: 0px 0px 0px 0px;
-  background-color: white;
+  background-color: rgba(252, 214, 117, 0.675);
 }
 .whoDiv{
   display: flex;
@@ -199,31 +207,38 @@ progress{
   display: flex;
   justify-content: center;
 }
-.marginTop16px{
+.marginTop16px {
   margin-top: 16px;
 }
-.margin0px{
+.margin0px {
   margin: 0px;
 }
-.margin8px{
+.margin8px {
   margin: 8px;
 }
-.margin16px{
+.margin16px {
   margin: 16px;
 }
-.padding0px{
+.padding0px {
   padding: 0px;
 }
-.padding8px{
+.padding8px {
   padding: 8px;
 }
-.padding16px{
+.padding16px {
   padding: 16px;
 }
-@media (min-width: 1001px) {
-  body, button, #textInputForName, #textInputForQuote {
-    font-size: 20px;
+
+@media (max-width: 500px){
+  #galleryDiv{
+    padding: 0px;
   }
+  #createPostDiv{
+    width: 100%;
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+}
+@media (min-width: 501px) {
   #textInputForName:hover, #textInputForName:focus,
   #textInputForQuote:hover, #textInputForQuote:focus {
     border-width: 1px;
@@ -261,33 +276,26 @@ progress{
     width: 500px;
   }
   #createPostDiv:hover{
-    box-shadow: 0px 0px 20px 1px #e3e0d0ff;
-  }
-  .col{
-    flex: 25%;
-    max-width: 25%;
+    box-shadow: 5px 5px 15px 2px #e3f0d0ff;
   }
 }
-@media (max-width: 600px){
+
+@media (max-width: 500px){
   .col{
-    padding: 0px;
+    padding: 4px;
     flex: 100%;
     max-width: 100%;
   }
-  #galleryDiv{
-    padding: 0px;
-  }
-  #createPostDiv{
-    width: 100%;
-    box-shadow: 0px 0px 0px 0px transparent;
-  }
-  .inDiv{
-    border-radius: 0px;
-  }
 }
-@media (min-width: 601px) and (max-width: 1000px){
+@media (min-width: 501px) and (max-width: 1000px){
   .col{
     flex: 50%;
     max-width: 50%;
+  }
+}
+@media (min-width: 1001px) {
+  .col{
+    flex: 25%;
+    max-width: 25%;
   }
 }

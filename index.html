@@ -8,66 +8,34 @@
       Photo Gallery
     </title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
-    <!-- <script src="p5.sound.min.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js" defer></script>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js" defer></script>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js" defer></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
      <link rel="stylesheet" type="text/css" href="style.css">
+     
+    <script src="./gallery.js" defer>
+    </script>
 
   </head>
   <body>
 
-    <div id="createPostOutDiv" class="centerDivContentsHoriontally">
-      <div id="createPostDiv">
-
-        <div id="textDiv">
-          <input type="text" id="textInputForName" placeholder="Your sweet name"/>
-        </div>
-      
-        <div id="quoteDiv" class="marginTop16px">
-          <textarea id="textInputForQuote" placeholder="Your greeting for the world"></textarea>
-        </div>
-
-        <div id="selectedPhotoDiv"></div>
-
-        <div id="fileInputDiv" class="marginTop16px">
-          <label for="fileInput" id="fileInputLabel">
-            <div id="insideLabelDiv">
-              <div id="fileInputLabelText">Choose a pic</div>
-              <input type="file" id="fileInput" accept="image/png, image/jpeg"/>
-              <div id="fileInputLabelPic"></div>
-            </div>
-          </label>
-        </div>
-
-        <div id="submitDiv" class="marginTop16px">
-          <button id="submitButton">POST</button>
-        </div>
-        
-        <div id="progressDiv">
-          <progress id="uploadProgressBar" value="0" max="100"></progress>
-        </div>
-        
-        <div id="resDiv">
-        </div>
-
-      </div>
-    </div>
-
-    
+    <ul class="menu">
+      <li><a href="/">Gallery</a></li>
+      <li><a href="/upload">Upload</a></li>
+    </ul>
 
     <div id="galleryTopDiv" class="centerDivContentsHoriontally margin16px">
+      Upload and Click 🔁 to show images
     </div>
 
     <div id="galleryButtonsDivTop" class="centerDivContentsHoriontally margin16px"> 
+      <button class="pageButtons" onclick="startShowImages()">🔁</button>
     </div>
 
     <div id="galleryDiv">
@@ -82,21 +50,13 @@
     </div>
 
     <div id="galleryButtonsDivBottom" class="centerDivContentsHoriontally margin16px">
+      <button class="pageButtons" onclick="previousPage()">⬅</button>
+      <button class="pageButtons" onclick="nextPage()">➡</button>
     </div>
 
-    <div class="centerDivContentsHoriontally margin8px">
-      <audio controls loop>
-        <source src="Assets/song.mp4" type="video/mp4">
-      </audio>
-    </div>
-
-    <div class="centerDivContentsHoriontally margin8px" style="color: #888; font-size: 14px;">
+    <footer class="centerDivContentsHoriontally margin8px" style="color: #888; font-size: 14px;">
       Created by SNEHIL with ❤
-    </div>
+    </footer>
     
-    <script src="sketch.js">
-    </script>
-
-
   </body>
 </html>

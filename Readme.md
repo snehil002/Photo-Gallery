@@ -1,7 +1,7 @@
 # Photo Gallery
 ~ By Snehil Kumar
 
-<img src="/ss/photo-gallery.png" alt="Photo Gallery Screenshot" width="595" height="400" />  
+>See ss/ folder for a screenshot  
 
 ## About this app:
 Photo Gallery is a web app where we can write something, upload photos and view them online.
