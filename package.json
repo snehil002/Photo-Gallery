@@ -1,0 +1,14 @@
+{
+  "name": "photo-gallery",
+  "version": "1.0.0",
+  "description": "Firebase auth using npm",
+  "main": "gallery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Snehil Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.19.1"
+  }
+}
